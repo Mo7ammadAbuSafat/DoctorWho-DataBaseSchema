@@ -49,3 +49,27 @@ CREATE TABLE tblDoctor (
 	FirstEpisodeDate date,
 	LastEpisodeDate date
 );
+
+ALTER TABLE tblEpisodeEnemy
+ADD CONSTRAINT FK_EpisodeId_tblEpisodeEnemy
+FOREIGN KEY (EpisodeId) REFERENCES tblEpisode(EpisodeId);
+
+ALTER TABLE tblEpisodeEnemy
+ADD CONSTRAINT FK_EnemyId_tblEpisodeEnemy
+FOREIGN KEY (EnemyId) REFERENCES tblEnemy(EnemyId);
+
+ALTER TABLE tblEpisode
+ADD CONSTRAINT FK_AutherId_tblEpisode
+FOREIGN KEY (AutherId) REFERENCES tblAuther(AutherId);
+
+ALTER TABLE tblEpisode
+ADD CONSTRAINT FK_DoctorId_tblDoctor
+FOREIGN KEY (DoctorId) REFERENCES tblDoctor(DoctorId);
+
+ALTER TABLE tblEpisodeCompanion
+ADD CONSTRAINT FK_EpisodeId_tblEpisodeCompanion
+FOREIGN KEY (EpisodeId) REFERENCES tblEpisode(EpisodeId);
+
+ALTER TABLE tblEpisodeCompanion
+ADD CONSTRAINT FK_CompanionId_tblEpisodeCompanion
+FOREIGN KEY (CompanionId) REFERENCES tblCompanion(CompanionId);
