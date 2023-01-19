@@ -69,7 +69,9 @@ VALUES
 	(20000,1,5,'TypeY','TitleQ','2021-1-1',20,5000,'Note2'),
 	(30000,2,4,'TypeZ','TitleA','2017-5-11',20,2000,'Note3'),
 	(40000,1,2,'TypeE','TitleD','2021-2-5',10,5000,'Note7'),
-	(50000,2,1,'TypeF','TitleS','2022-7-7',30,1000,'Note5');
+	(50000,2,1,'TypeF','TitleS','2022-7-7',30,null,'Note5'),
+	(60000,2,1,'TypeP','TitleP','2020-8-7',20,1000,'Note3'),
+	(70000,2,1,'TypeR','TitleR','2022-9-2',50,null,'Note7');
 
 
 INSERT INTO tblEpisodeEnemy (
