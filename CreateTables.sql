@@ -20,7 +20,7 @@ CREATE TABLE tblEpisode (
 	Title varchar(30) NOT NULL,
 	EpsodeDate date NOT NULL,
 	AutherId int NOT NULL,
-	DoctorId int NOT NULL,
+	DoctorId int,
 	Notes varchar(50)
 );
 
