@@ -1,7 +1,14 @@
 USE DoctorWho;
 
 CREATE FUNCTION fnEnemies( @Id INT)
-RETURNS TABLE
+RETURNS varchar(max)
 AS 
-RETURN (SELECT EnemyName FROM tblEnemy E Left JOIN tblEpisodeEnemy EE ON E.EnemyId = EE.EnemyId where EE.EpisodeId = @Id);
+BEGIN
+DECLARE @Result varchar(max)
+SELECT @Result = COALESCE(@Result + ', ','') + EnemyName 
+											   FROM tblEnemy E Left JOIN tblEpisodeEnemy EE 
+											   ON E.EnemyId = EE.EnemyId 
+											   WHERE EE.EpisodeId = @Id
+return @Result;
+END;
 
