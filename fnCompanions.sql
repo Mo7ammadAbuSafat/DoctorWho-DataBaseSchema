@@ -1,7 +1,13 @@
 USE DoctorWho;
 
 CREATE FUNCTION fnCompanions( @Id INT)
-RETURNS TABLE
+RETURNS varchar(max)
 AS 
-RETURN (SELECT CompanionName FROM tblCompanion C RIGHT JOIN tblEpisodeCompanion EC ON C.CompanionId = EC.CompanionId where EC.EpisodeId = @Id);
-
+BEGIN
+DECLARE @Result varchar(max)
+SELECT @Result = COALESCE(@Result + ', ','') + CompanionName 
+											   FROM tblCompanion C RIGHT JOIN tblEpisodeCompanion EC 
+											   ON C.CompanionId = EC.CompanionId 
+											   WHERE EC.EpisodeId = @Id
+return @Result;
+END;
