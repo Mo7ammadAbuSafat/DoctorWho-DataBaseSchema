@@ -1,6 +1,6 @@
 # DoctorWho-DataBaseSchema
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a3ef2ad0-a6f0-4a36-887e-7b7940bed7dd/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a3ef2ad0-a6f0-4a36-887e-7b7940bed7dd/Untitled.png)
+![image](https://user-images.githubusercontent.com/103439731/214258750-f68448d0-43c0-43e2-ba67-2f6dcabf11bb.png)
 
 1. Create a DB named `DoctorWho`.
 2. Write scripts to create the above tables, keys, relationships and constraints.
