@@ -5,7 +5,7 @@ CREATE TABLE tblEnemy (
 	EnemyName varchar(20) NOT NULL,
 	Description varchar(50)
 );
-
+chang
 CREATE TABLE tblEpisodeEnemy (
 	EpisodeEnemyId int NOT NULL PRIMARY KEY,
 	EnemyId int NOT NULL,
